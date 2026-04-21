@@ -1,26 +1,37 @@
-// Calculator
-function calculate() {
-  let val = document.getElementById("calc").value;
-  document.getElementById("result").innerText = eval(val);
+// 📊 Formula
+function showFormula(type) {
+  let box = document.getElementById("formulaBox");
+
+  if (type === "physics") {
+    box.innerHTML = "v = u + at <br> F = ma";
+  } else if (type === "chemistry") {
+    box.innerHTML = "PV = nRT <br> pH = -log[H+]";
+  }
 }
 
-// Notes Save
-function saveNotes() {
-  let notes = document.getElementById("notes").value;
-  localStorage.setItem("notes", notes);
-  alert("Saved!");
+// 🧠 Quiz
+function checkAnswer(ans) {
+  let result = document.getElementById("quizResult");
+  if (ans === 4) {
+    result.innerText = "Correct ✅";
+  } else {
+    result.innerText = "Wrong ❌";
+  }
 }
 
-// Load Notes
-window.onload = function() {
-  document.getElementById("notes").value = localStorage.getItem("notes") || "";
-};
+// 📅 Planner
+function addTask() {
+  let task = document.getElementById("task").value;
+  let list = document.getElementById("taskList");
 
-// Timer
-let time = 0;
-function startTimer() {
-  setInterval(() => {
-    time++;
-    document.getElementById("time").innerText = time + " sec";
-  }, 1000);
+  let li = document.createElement("li");
+  li.innerText = task;
+  list.appendChild(li);
+}
+
+// 🤖 Fake AI
+function aiReply() {
+  let input = document.getElementById("aiInput").value;
+  document.getElementById("aiOutput").innerText = 
+    "AI: Ye concept practice karo 👍";
 }
