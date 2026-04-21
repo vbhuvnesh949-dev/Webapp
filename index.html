@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My App</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Mobile Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+  <h1>🚀 My First App</h1>
+  <p>Ye meri live app hai 🔥</p>
+
+  <button onclick="showMessage()">Click Me</button>
+
+  <script src="script.js"></script>
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+      .then(() => console.log("Service Worker Registered"));
+    }
+  </script>
+
+</body>
+</html>
