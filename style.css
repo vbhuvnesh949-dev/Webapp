@@ -1,14 +1,32 @@
 body {
-  text-align: center;
-  font-family: Arial;
-  background-color: #111;
+  background: #0d0d0d;
   color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 18px;
-  background: orange;
+  padding: 8px 15px;
+  margin-top: 10px;
+  background: #00ffcc;
   border: none;
   border-radius: 10px;
+}
+
+textarea {
+  width: 90%;
+  height: 80px;
 }
