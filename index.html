@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>My App</title>
-
-  <!-- CSS -->
+  <title>JEE Student App</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="manifest.json">
-
-  <!-- Mobile Responsive -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-  <h1>🚀 My First App</h1>
-  <p>Ye meri live app hai 🔥</p>
+<h1>📚 JEE Student Tool</h1>
 
-  <button onclick="showMessage()">Click Me</button>
+<div class="container">
 
-  <script src="script.js"></script>
+  <!-- Calculator -->
+  <div class="card">
+    <h2>🧮 Calculator</h2>
+    <input type="text" id="calc" placeholder="2+2">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+  </div>
 
-  <!-- Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-      .then(() => console.log("Service Worker Registered"));
-    }
-  </script>
+  <!-- Notes -->
+  <div class="card">
+    <h2>📝 Notes</h2>
+    <textarea id="notes"></textarea>
+    <button onclick="saveNotes()">Save</button>
+  </div>
+
+  <!-- Timer -->
+  <div class="card">
+    <h2>⏱ Timer</h2>
+    <p id="time">0</p>
+    <button onclick="startTimer()">Start</button>
+  </div>
+
+  <!-- Formula -->
+  <div class="card">
+    <h2>📘 Formulas</h2>
+    <p>Speed = Distance / Time</p>
+    <p>a² + b² = c²</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
