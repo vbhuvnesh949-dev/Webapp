@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JEE Student App</title>
+  <title>JEE Pro App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>📚 JEE Student Tool</h1>
+<h1>🚀 JEE Pro App</h1>
 
 <div class="container">
 
-  <!-- Calculator -->
-  <div class="card">
-    <h2>🧮 Calculator</h2>
-    <input type="text" id="calc" placeholder="2+2">
-    <button onclick="calculate()">Calculate</button>
-    <p id="result"></p>
-  </div>
-
-  <!-- Notes -->
-  <div class="card">
-    <h2>📝 Notes</h2>
-    <textarea id="notes"></textarea>
-    <button onclick="saveNotes()">Save</button>
-  </div>
-
-  <!-- Timer -->
-  <div class="card">
-    <h2>⏱ Timer</h2>
-    <p id="time">0</p>
-    <button onclick="startTimer()">Start</button>
-  </div>
-
   <!-- Formula -->
   <div class="card">
-    <h2>📘 Formulas</h2>
-    <p>Speed = Distance / Time</p>
-    <p>a² + b² = c²</p>
+    <h2>📊 Formulas</h2>
+    <select onchange="showFormula(this.value)">
+      <option value="">Select</option>
+      <option value="physics">Physics</option>
+      <option value="chemistry">Chemistry</option>
+    </select>
+    <div id="formulaBox"></div>
+  </div>
+
+  <!-- Quiz -->
+  <div class="card">
+    <h2>🧠 Quiz</h2>
+    <p id="question">2 + 2 = ?</p>
+    <button onclick="checkAnswer(4)">4</button>
+    <button onclick="checkAnswer(5)">5</button>
+    <p id="quizResult"></p>
+  </div>
+
+  <!-- Study Planner -->
+  <div class="card">
+    <h2>📅 Study Planner</h2>
+    <input type="text" id="task" placeholder="Study task">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  <!-- AI Doubt Solver -->
+  <div class="card">
+    <h2>🤖 AI Doubt</h2>
+    <input type="text" id="aiInput" placeholder="Ask doubt">
+    <button onclick="aiReply()">Ask</button>
+    <p id="aiOutput"></p>
   </div>
 
 </div>
